@@ -16,7 +16,7 @@ public class Cart extends Bill{
       //------------
     	inCart.add(a);
     	quant.add(q);
-   
+    	noOfItems++;
 
     }
     public int totalAmt=0;
@@ -32,6 +32,8 @@ public class Cart extends Bill{
     	int total=0;
 //    	write your code here!!!
 //    	----------------------
+    	for(int i=0;i<noOfItems;i++)
+    		total+=(quant.get(i)*inCart.get(i).mrp);
     	return total;
     	
     }
